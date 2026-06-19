@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: regapp-deployment
+  labels:
+    app: regapp
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: regapp
+  template:
+    metadata:
+      labels:
+        app: regapp
+    spec:
+      containers:
+      - name: regapp-container
+        image: srikanth018/regimg:latest
+        imagePullPolicy: Always 
+        ports:
+        - containerPort: 8080

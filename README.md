@@ -54,20 +54,20 @@ Project Demonstration: [Watch the Full Deployment Automation Walkthrough Video](
 
 1. Static Application Security Testing (SAST)
 The source code code quality gates are validated by SonarQube before any build artifacts are packaged.
-![SonarQube Code Analysis Quality Gate](./screenshots/1-sonarqube-quality-gate.png)
+[view SonarQube Code Analysis Quality Gate](./screenshots/1-sonarqube-quality-gate.png)
 
 2. Continuous Integration Lifecycle Engine
 Jenkins coordinates codebase pulls, triggers analysis steps, and handles downstream deployment handoffs automatically.
-![Jenkins Automation Orchestrator Pipeline](./screenshots/2-jenkins-pipeline-dashboard.png)
+[view Jenkins Automation Orchestrator Pipeline](./screenshots/2-jenkins-pipeline-dashboard.png)
 
 3. Binary Artifact Storage and Security
 Compiled .war application binaries are assigned distinct version numbers and uploaded to an enterprise registry.
-![JFrog Artifactory Local Release Repository](./screenshots/3-jfrog-artifactory-storage.png)
+[view JFrog Artifactory Local Release Repository](./screenshots/3-jfrog-artifactory-storage.png)
 
 4. Containerized Image Packaging
 Production runtime code gets container layers wrapped and pushed straight to standard hosting systems.
-![Docker Hub Container Image Registry](./screenshots/4-dockerhub-registry.png)
+[view Docker Hub Container Image Registry](./screenshots/4-dockerhub-registry.png)
 
 5. Final Verified Production Deployment
 The responsive user interface accessible directly by end-users via public routing.
-![Live Production Application Web Interface](./screenshots/5-production-web-app.png)
+[view Live Production Application Web Interface](./screenshots/5-production-web-app.png)

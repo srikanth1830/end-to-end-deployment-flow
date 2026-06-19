@@ -1,0 +1,17 @@
+- hosts: kubernetes
+  remote_user: root
+
+  tasks:
+    - name: Copy existing deployment file to kubernetes machine
+      copy:
+        src: /opt/docker/deployment.yml
+        dest: /home/ec2-user/deployment.yml
+        owner: ec2-user
+        group: ec2-user
+        mode: '0644'
+
+    - name: Apply deployment file
+      command: kubectl apply -f /home/ec2-user/deployment.yml
+
+    - name: Pull latest image and replace old pods
+      command: kubectl rollout restart deployment/regapp-deployment

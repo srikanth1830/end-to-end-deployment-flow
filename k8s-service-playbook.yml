@@ -1,0 +1,14 @@
+- hosts: kubernetes
+  remote_user: root
+
+  tasks:
+    - name: Copy existing service file to kubernetes machine
+      copy:
+        src: /opt/docker/service.yml
+        dest: /home/ec2-user/service.yml
+        owner: ec2-user
+        group: ec2-user
+        mode: '0644'
+
+    - name: Apply service file
+      command: kubectl apply -f /home/ec2-user/service.yml

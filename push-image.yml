@@ -1,0 +1,17 @@
+- hosts: local
+  vars:
+    docker_user: "srikanth018"
+    docker_password: "{{ DOCKER_HUB_PASSWORD }}"
+
+  tasks:
+    - name: creating image
+      command: docker build -t regimg /opt/docker
+
+    - name: tagging image for docker hub
+      command: docker tag regimg srikanth018/regimg:latest
+
+    - name: logging into docker hub
+      command: docker login -u "{{ docker_user }}" -p "{{ docker_password }}"
+
+    - name: push to hub
+      command: docker push srikanth018/regimg:latest
