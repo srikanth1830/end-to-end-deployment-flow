@@ -46,7 +46,7 @@ The application cluster state scales dynamically to manage traffic routing and r
 - High-Availability Scaling: Deploys 4 identical runtime pod replicas across available cluster compute nodes via deployment.yml.
 - Traffic Load Balancing: Configures network routing rules using a LoadBalancer service manifest to bind an internet-facing entry point.
 
-Project Demonstration: [Watch the Full Deployment Automation Walkthrough Video](https://www.linkedin.com/posts/srikanth-reddy-ramidi-788a03375_devops-kubernetes-ansible-ugcPost-7473992605635178496-3sfa/?utm_source=screenshot_social_share&utm_medium=ios_app&rcm=ACoAAFzgIJgBXrHCm-FYh8kdu38IGiWI73PYHMk&utm_campaign=copy_link)
+Project Demonstration: [Watch the Full Deployment Automation Walkthrough Video](YOUR_LINKEDIN_VIDEO_URL)
 
 ---
 
