@@ -2,9 +2,9 @@ pipeline {
     agent any 
 
     environment {
-        GITHUB_REPO       = 'https://github.com'
+        GITHUB_REPO       = 'https://github.com/srikanth1830/end-to-end-deployment-flow.git'
         SONAR_SERVER_NAME = 'my-sonar-sytem'
-        JFROG_URL         = 'http://35.171.28'
+        JFROG_URL         = 'http://35.171.28.103:8081/artifactory'
         JFROG_REPO        = 'libs-release-local'
         WAR_VERSION       = "app-v${BUILD_NUMBER}.war" 
         ANSIBLE_SERVER_IP = '172.31.30.240' 
@@ -18,7 +18,7 @@ pipeline {
         stage('Stage 1: Fetch Code from Git Server') {
             steps {
                 cleanWs()
-                git branch: 'project', url: "${GITHUB_REPO}"
+                git branch: 'main', url: "${GITHUB_REPO}"
             }
         }
 
